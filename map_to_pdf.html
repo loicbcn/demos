@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
 <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
 <!--<script src="https://code.highcharts.com/maps/modules/map.js"></script>-->
@@ -5,7 +10,10 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
-
+<script src="https://code.highcharts.com/10.2.1/lib/jspdf.js"></script>
+<script src="https://code.highcharts.com/10.2.1/lib/svg2pdf.js"></script>
+</head>
+<body>
 <div id="map_sru">oo</div>
 
 <script
@@ -24,6 +32,7 @@ var row;
 var all = [];
 var one;
 var years = [];
+var selected_year = 2005;
 
 for ( var c in communes_sru_geojson["features"] ) {
   row = communes_sru_geojson["features"][c];
@@ -297,3 +306,5 @@ function getdata_sru() {return [{"annee":2005,"item":[{"insee_com":"31022","taux
 
 
 </script>
+</body>
+</html>
